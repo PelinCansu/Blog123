@@ -1,0 +1,24 @@
+﻿@using Blog123.UI.Areas.Author.ViewModels;
+
+@{
+	ViewData["Title"] = "Default";
+
+}
+
+@model List<PostListVM>
+@foreach (var item in Model)
+{
+	
+		<li>
+			<span>
+				<h6 class="font-weight-bold">
+					<a href="./article.html" class="text-dark">@item.Title</a>
+				</h6>
+				<p class="text-muted">
+					@item.Author.User.UserName
+				</p>
+			</span>
+		</li>
+
+}
+

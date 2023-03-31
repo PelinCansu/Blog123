@@ -1,0 +1,35 @@
+﻿@using Blog123.UI.Areas.Admin.ViewModels.CategoryVMs;
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@model CategoryCreateVM
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <form method="post" asp-action="Create" asp-area="Admin" asp-controller="Category">
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example1">Kategori Adı:</label>
+                <input asp-for="Name" id="form4Example1" class="form-control" />  
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Kategori Kodu:</label>
+                <input asp-for="Code" id="form4Example2" class="form-control" />
+
+            </div>
+
+            
+
+            <!-- Submit button -->
+            <input type="submit" class="btn btn-primary btn-block mb-4" value="Ekle" />
+        </form>
+
+    </div>
+</div>

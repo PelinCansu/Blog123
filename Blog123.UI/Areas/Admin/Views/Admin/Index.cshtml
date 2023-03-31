@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: white;
+        height: 250px;
+        gap: 10px;
+    }
+</style>
+
+
+<div class="container">
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/categoryAdmin1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Kategori Yönetimi</h5>
+            <p class="card-text">Kategori ekleme, silme, güncelleme ve listeleme işlemleri bu bölümden yapılmaktadır.</p>
+            <a class="btn btn-primary" style="color:azure; font-size:larger" asp-action="Index" asp-area="Admin" asp-controller="Category">Tıklayınız</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/logo123.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Rol Yönetimi</h5>
+            <p class="card-text">Rol ekleme, silme, güncelleme ve listeleme işlemleri bu bölümden yapılmaktadır.</p>
+            <a class="btn btn-xs btn-success" style="color:azure; font-size:larger" asp-action="Index" asp-area="Admin" asp-controller="Role">Tıklayınız</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/authorAdmin1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Yazar Yönetimi</h5>
+            <p class="card-text">Yazar ekleme, silme, güncelleme ve listeleme işlemleri bu bölümden yapılmaktadır.</p>
+            <a class="btn btn-sm btn-info" style="color:azure; font-size:larger" asp-action="Index" asp-area="Admin" asp-controller="Author">Tıklayınız</a>
+        </div>
+
+
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/postAdmin1.jpg"  class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Gönderi Yönetimi</h5>
+            <p class="card-text">Gönderi ekleme, silme, güncelleme ve listeleme işlemleri bu bölümden yapılmaktadır.</p>
+            <a class="btn btn-xs btn-success" style="color:azure; font-size:larger" asp-action="Index" asp-area="Admin" asp-controller="Post">Tıklayınız</a>
+        </div>
+    </div>
+
+
+</div>

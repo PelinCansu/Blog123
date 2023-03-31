@@ -1,0 +1,60 @@
+﻿@using Blog123.Domain.Entities.Concrete;
+@using Blog123.UI.Areas.Admin.ViewModels.AuthorVMs;
+@using Blog123.UI.Areas.Admin.ViewModels.UserVMs;
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@model AuthorCreateVM
+@{
+    List<UserListVM> userList = TempData["listUsers"] as List<UserListVM>;
+}
+
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <form method="post" asp-action="Create" asp-area="Admin" asp-controller="Author">
+
+            <div class="form-group">
+                <label asp-for="UserName">Kullanıcı Seçiniz..</label>
+                <select id="selection" class="form-control" asp-for="@Model.UserId" onchange="update()">
+                    @foreach (var item in userList)
+                    {
+                        <option value=@item.Id
+                        data-second="@item.UserName">@item.Id</option>
+                    }
+                   
+
+                </select>
+            </div>
+
+            <!-- input -->
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Kullanıcı Adı:</label>
+                <input type="text" asp-for="@Model.UserName" id="forUserName" class="form-control"/>
+            </div>
+
+            <!-- input -->
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Yazar Adı:</label>
+                <input asp-for="FullName" id="form4Example2" class="form-control" />
+            </div>
+
+            <!-- Submit button -->
+            <input type="submit" class="btn btn-primary btn-block mb-4" value="Ekle" />
+        </form>
+
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script src="~/js/javascript.js"></script>
+}

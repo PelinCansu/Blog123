@@ -1,0 +1,77 @@
+﻿@using Blog123.UI.Areas.Admin.ViewModels.AuthorVMs;
+
+@{
+    ViewData["Title"] = "GetAllAuthors";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<AuthorListVM>
+
+<div class="row">
+    <div class="col-lg-12">
+        <a class="btn btn-primary" style="color:azure; font-size:larger" asp-action="Create" asp-controller="Author" asp-area="Admin">Yeni Yazar Ekle</a>
+    </div>
+
+</div>
+
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>Yazar ID</th>
+                    <th>Kullanıcı ID</th>
+                    <th>Yazar Adı</th>
+                    <th>Kullanıcı Adı</th>
+                    <th>Gönderiler</th>
+                    <th>Düzenle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <p class="fw-normal mb-1" asp-for="@item.Id">@item.Id</p>
+                            <p class="text-muted mb-0"></p>
+                        </td>
+                        <td>
+                            <p class="fw-normal mb-1" asp-for="@item.UserId">@item.UserId</p>
+                            <p class="text-muted mb-0"></p>
+                        </td>
+
+                        <td>
+                            <p class="fw-normal mb-1" asp-for="@item.FullName">@item.FullName</p>
+                        </td>
+                        <td>
+                            <p class="fw-normal mb-1" asp-for="@item.UserName">@item.UserName</p>
+                        </td>
+                        <td>
+                            <p class="fw-normal mb-1" asp-for="@item.Posts">@item.Posts</p>
+                        </td>
+
+                        <td>
+                            <a asp-action="Edit" asp-area="Admin" asp-controller="Author" asp-route-id="@item.Id" type="button" class="btn btn-link btn-sm btn-rounded">
+                                Düzenle
+                            </a>
+                        </td>
+
+                        <td>
+                            <a asp-action="Delete" asp-area="Admin" asp-controller="Author" asp-route-id="@item.Id" type="button" class="btn btn-link btn-sm btn-rounded">
+                                Sil
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+

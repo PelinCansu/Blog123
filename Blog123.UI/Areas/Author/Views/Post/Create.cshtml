@@ -1,0 +1,102 @@
+﻿@using Blog123.Domain.Entities.Concrete;
+@using Blog123.UI.Areas.Admin.ViewModels.CategoryVMs;
+@using Blog123.UI.Areas.Author.ViewModels;
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model PostCreateVM
+
+@{
+    List<CategoryListVM> categories = TempData["CategoryList"] as List<CategoryListVM>;
+}
+
+
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <form method="post" asp-action="Create" asp-area="Author" asp-controller="Post">
+
+            <div class="form-group">
+                <label asp-for="@Model.Categories">Kategori Seçiniz..</label>
+              
+              
+                <select id="selection2" class="form-control" asp-for="@Model.Categories">
+
+                    @foreach (var item in Model.Categories)
+                    {
+                        <option value=@item.Id>@item.Name</option>
+                    
+                    }
+                </select>
+                
+            </div>
+
+
+       
+
+            <div class="form-outline mb-4">
+                <label  class="form-label" for="form4Example2">Post ID:</label>
+                <input  readonly type="text" asp-for="@Model.Id" class="form-control" />
+            </div>
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Yazar ID:</label>
+                <input readonly type="text" asp-for="AuthorID" class="form-control" />
+            </div>
+            
+       @*     <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">kullanıcı ID:</label>
+                <input readonly type="text" asp-for="AppUserId" class="form-control" />
+            </div>
+*@
+            <!-- input -->
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Başlık:</label>
+                <textarea asp-for=Title class="form-control" id="textAreaExample" rows="4"></textarea>
+            </div>
+
+            <!-- input -->
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">İçerik:</label>
+       
+                <textarea asp-for=Content class="form-control" id="textAreaExample" rows="4"></textarea>
+            </div> 
+            
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Özet:</label>
+                <textarea asp-for=Summary class="form-control" id="textAreaExample" rows="4"></textarea>
+            </div> 
+            
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Ortalama Okuma Süresi:</label>
+                <input asp-for="MinRead" id="form4Example2" class="form-control" />
+            </div> 
+            
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4Example2">Gösterim Sayısı:</label>
+                <input readonly asp-for="ViewCount" id="form4Example2" class="form-control" />
+            </div>
+
+       
+            <!-- Submit button -->
+            <input type="submit" class="btn btn-primary btn-block mb-4" value="Ekle" asp-route-userName="@User.Identity.Name"/>
+        </form>
+
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script src="~/js/javascript.js"></script>
+}
+
+            
+        
+       

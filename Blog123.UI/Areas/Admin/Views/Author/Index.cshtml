@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-grid">
+    <a class="btn btn-sm btn-secondary" style="color:azure; font-size:larger" asp-action="GetAllActiveAuthors"asp-controller="Author">Tüm Aktif Yazarları Listele</a>
+    <br />
+    <a class="btn btn-sm btn-info" style="color:azure; font-size:larger" asp-action="GetAllAuthors" asp-controller="Author">Tüm Yazarları Listele</a>
+    <br />
+    <a class="btn btn-primary" style="color:azure; font-size:larger" asp-action="Create" asp-controller="Author">Yeni Yazar Ekle</a>
+
+</div>
+<!-- end d-grid -->
+

@@ -1,0 +1,43 @@
+﻿@using Blog123.UI.Areas.Admin.ViewModels.RoleVMs;
+
+@{
+    ViewData["Title"] = "RoleAssign";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<UserRoleAssignVM>
+<form asp-action="RoleAssign" asp-controller="Role" method="post">
+    <table class="table table-responsive-md" style="font-size:large; font-palette:light;">
+        <thead>
+            <tr>
+                
+                <th>
+                    Rol Adı
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                    <tr>
+                    <td><input type="checkbox" asp-for="@Model[i].HasAssign" /> 
+                        
+                        @Model[i].Name
+                            <input type="hidden" asp-for="@Model[i].Id" />
+                            <input type="hidden" asp-for="@Model[i].Name" />
+                    </td>
+                    </tr>
+            }
+            <tr>
+                <td colspan="2">
+                    <div class="d-grid">
+                        <input type="submit" class="btn btn-sm btn-primary" style="color:azure; font-size:larger" value="Rol Ata" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</form>
+
+

@@ -1,0 +1,72 @@
+﻿@using Blog123.UI.Areas.Author.ViewModels;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container">
+	<div class="jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
+		<div class="pl-4 pr-0 h-100 tofront">
+			<div class="row justify-content-between">
+				<div class="col-md-6 pt-6 pb-6 align-self-center">
+					<h1 class="secondfont mb-3 font-weight-bold">Blog123</h1>
+					<p class="mb-3">
+						Bilginin paylaştıkça anlamlı hale geleceğine inanıyoruz. Yeni paylaşım alanınız sizin için Blog123 ekibi tarafından incelikle hazırlandı. Lütfen dilediğiniz kategoride deneyimlerinizi, bilgilerinizi ve hatta fikirlerinizi bizimle paylaşın. Paylaşımlarınız yönetici denetiminden sonra yayınlanacaktır.
+					</p>
+					<a href="./article.html" class="btn btn-dark">Daha fazla bilgi</a>
+				</div>
+				<div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url(./assets/img/demo/home.jpg);">	</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Header -->
+<!--------------------------------------
+MAIN
+--------------------------------------->
+
+<div class="container pt-4 pb-4">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="card border-0 mb-4 box-shadow h-xl-300">
+				<div style="background-image: url(./assets/img/demo/1.jpg); height: 150px;    background-size: cover;    background-repeat: no-repeat;"></div>
+				<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
+					<h2 class="h4 font-weight-bold">
+						<a class="text-dark" href=#> Gönderiler aşağıda kendi algoritmamıza göre sıralanmaktadır, her yazara eşit şans vermek adına her gün anasayfa gönderileri sıralaması değiştirilmektedir. </a>
+						
+					</h2>
+					<p class="card-text">
+						Öne çıkan gönderilere sağ taraftaki bölümlerden ulaşabilirsiniz.
+					</p>
+					<div>
+						<small class="d-block"><a class="text-muted" href="./author.html"></a> Blog123 Ekibi hayatınızda bol şans diler.. </small>
+						<small class="text-muted"> 12.12.2023 </small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			
+			<div class="flex-md-row mb-4 box-shadow h-xl-300">
+				@await Component.InvokeAsync("SelectedPosts")
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row justify-content-between">
+		<div class="col-md-8">
+			
+			<h5 class="font-weight-bold spanborder"><span>Gönderiler</span></h5>
+			@await Component.InvokeAsync("Post")
+		</div>
+		<div class="col-md-4 pl-4">
+			<h5 class="font-weight-bold spanborder"><span>Popüler Gönderiler</span></h5>
+			<ol class="list-featured">
+				@await Component.InvokeAsync("PopularPosts")
+			</ol>
+		</div>
+	</div>
+</div>

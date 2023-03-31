@@ -1,0 +1,27 @@
+﻿@using Blog123.UI.Areas.Author.ViewModels;
+
+@{
+	ViewData["Title"] = "Default";
+
+}
+
+@model List<PostListVM>
+
+@foreach (var item in Model)
+{
+	<div class="mb-3 d-flex justify-content-between">
+		<div class="pr-3">
+			<h2 class="mb-1 h4 font-weight-bold">
+				<a class="text-dark" href="./article.html">@item.Title</a>
+			</h2>
+			<p>
+				@item.Content
+			</p>
+			<div class="card-text text-muted small">
+				@item.Author.User.UserName
+			</div>
+			<small class="text-muted">@item.CreatedDate, @item.MinRead dk</small>
+		</div>
+		<img height="120" src="./assets/img/demo/5.jpg">
+	</div>
+}
