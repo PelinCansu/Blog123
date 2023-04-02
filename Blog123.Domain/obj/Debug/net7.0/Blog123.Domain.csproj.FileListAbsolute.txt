@@ -1,0 +1,12 @@
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\bin\Debug\net7.0\Blog123.Domain.deps.json
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\bin\Debug\net7.0\Blog123.Domain.dll
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\bin\Debug\net7.0\Blog123.Domain.pdb
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\Blog123.Domain.csproj.AssemblyReference.cache
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\Blog123.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\Blog123.Domain.AssemblyInfoInputs.cache
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\Blog123.Domain.AssemblyInfo.cs
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\Blog123.Domain.csproj.CoreCompileInputs.cache
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\Blog123.Domain.dll
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\refint\Blog123.Domain.dll
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\Blog123.Domain.pdb
+C:\Users\pelin\OneDrive\Masaüstü\Blog123\Blog123.Domain\obj\Debug\net7.0\ref\Blog123.Domain.dll
